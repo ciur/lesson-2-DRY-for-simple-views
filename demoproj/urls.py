@@ -4,5 +4,8 @@ from demoapp import views as demo_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('demoapp/profile/<int:id>', demo_views.profile, name="profile"),
+    path('about', demo_views.about, name="about"),
+    path('terms', demo_views.terms, name="terms"),
+    path('privacy', demo_views.privacy_policy, name="privacy"),
+    path('cookies', demo_views.cookies_policy, name="cookies"),
 ]
