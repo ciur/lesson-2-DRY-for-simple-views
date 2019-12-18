@@ -17,7 +17,7 @@ class PageViewTests(TestCase):
         )
 
     def test_privacy(self):
-        resp = self.client.get(reverse('privacy'))
+        resp = self.client.get(reverse('privacy_policy'))
 
         self.assertEqual(
             resp.status_code, 200
@@ -31,7 +31,7 @@ class PageViewTests(TestCase):
         )
 
     def test_cookies(self):
-        resp = self.client.get(reverse('cookies'))
+        resp = self.client.get(reverse('cookies_policy'))
 
         self.assertEqual(
             resp.status_code, 200

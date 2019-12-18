@@ -1,29 +1,16 @@
 from django.shortcuts import render
+from django.views.generic import TemplateView
 
 
-def about(request):
+def index(request):
+    # index page for everyone
+    # call some models here
+    # filter, order them and add to context
 
     return render(
-        request, 'demoapp/about.html',
+        request, 'demoapp/index.html'
     )
 
 
-def privacy_policy(request):
-
-    return render(
-        request, 'demoapp/privacy_policy.html',
-    )
-
-
-def cookies_policy(request):
-
-    return render(
-        request, 'demoapp/cookies_policy.html',
-    )
-
-
-def terms(request):
-
-    return render(
-        request, 'demoapp/terms.html',
-    )
+class PageView(TemplateView):
+    pass

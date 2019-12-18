@@ -4,8 +4,20 @@ from demoapp import views as demo_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('about', demo_views.about, name="about"),
-    path('terms', demo_views.terms, name="terms"),
-    path('privacy', demo_views.privacy_policy, name="privacy"),
-    path('cookies', demo_views.cookies_policy, name="cookies"),
 ]
+
+pages = [
+    'about',
+    'terms',
+    'privacy_policy',
+    'cookies_policy'
+]
+
+for page in pages:
+    urlpatterns.append(
+        path(
+            page,
+            demo_views.PageView.as_view(template_name=f"demoapp/{page}.html"),
+            name=page
+        )
+    )

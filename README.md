@@ -8,4 +8,5 @@ In this lesson I will show how avoid repetive code in such cases.
 
 Links:
 
-* [YouTube Lesson](https://www.youtube.com/watch?v=mnZIC0F4Ujc)    
+* [YouTube Lesson](https://www.youtube.com/watch?v=2RzbCrpgESc)
+* [Class Based Views](https://docs.djangoproject.com/en/3.0/topics/class-based-views/)    
